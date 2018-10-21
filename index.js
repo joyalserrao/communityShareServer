@@ -17,7 +17,15 @@ routes(app);
 // });
 
 
-const server = app.listen(3000,'127.0.0.1',function () {
+var port = process.env.PORT || 3000;
+
+const server = app.listen(port,function () {
 	console.log("app running on port.", server.address().port);
 	console.log("app running on address.", server.address().address);
 });
+
+
+// const server = app.listen(3000,'127.0.0.1',function () {
+// 	console.log("app running on port.", server.address().port);
+// 	console.log("app running on address.", server.address().address);
+// });
